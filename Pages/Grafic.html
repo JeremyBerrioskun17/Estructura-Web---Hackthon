@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gueguense Code</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-seedling"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">Gueguense<sup>Code</sup></div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard (Invernadero) -->
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">
+            <i class="fas fa-warehouse"></i>
+            <span>Dashboard</span>
+            </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Fitosanitaria</div>
+
+        <!-- Diagnóstico IA -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIA"
+            aria-expanded="false" aria-controls="collapseIA">
+            <i class="fas fa-microscope"></i>
+            <span>Diagnóstico IA</span>
+            </a>
+            <div id="collapseIA" class="collapse" aria-labelledby="headingIA" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Clasificación:</h6>
+                <a class="collapse-item" href="PlagasRegistradas.html">Plagas registradas</a>
+                <a class="collapse-item" href="Diagnostic.html">Mis diagnósticos</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Modelos IA:</h6>
+                <a class="collapse-item" href="utilities-border.html">Versiones del modelo</a>
+                <a class="collapse-item" href="tables.html">Métricas</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Mapas -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMapa"
+            aria-expanded="false" aria-controls="collapseMapa">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa</span>
+            </a>
+            <div id="collapseMapa" class="collapse" aria-labelledby="headingMapa" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Geolocalización:</h6>
+                <a class="collapse-item" href="mapa-focos.html">Focos y casos</a>
+                <a class="collapse-item" href="mapa-heatmap.html">Mapa de calor</a>
+                <a class="collapse-item" href="mapa-filtros.html">Filtros por fecha/región</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Reportes -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReportes"
+            aria-expanded="false" aria-controls="collapseReportes">
+            <i class="fas fa-chart-line"></i>
+            <span>Reportes</span>
+            </a>
+            <div id="collapseReportes" class="collapse" aria-labelledby="headingReportes" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Analítica:</h6>
+                <a class="collapse-item" href="Grafic.html">Gráficas</a>
+                <a class="collapse-item" href="tables.html">Datos en tabla</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">IoT</div>
+
+        <!-- Sensores -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSensores"
+            aria-expanded="false" aria-controls="collapseSensores">
+            <i class="fas fa-thermometer-half"></i>
+            <span>Sensores</span>
+            </a>
+            <div id="collapseSensores" class="collapse" aria-labelledby="headingSensores" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Lecturas:</h6>
+                <a class="collapse-item" href="temp.html">Monitoreo Tiempo Real</a>
+                <a class="collapse-item" href="temp.html">Control Segun analisis</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Control -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseControl"
+            aria-expanded="false" aria-controls="collapseControl">
+            <i class="fas fa-sliders-h"></i>
+            <span>Control</span>
+            </a>
+            <div id="collapseControl" class="collapse" aria-labelledby="headingControl" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Actuadores:</h6>
+                <a class="collapse-item" href="ventilador.html">Monitoreo automatico</a>
+                <a class="collapse-item" href="ventilador.html">Monitoreo Manual</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Gestión</div>
+
+        <!-- Gestión (Usuarios/Roles) -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGestion"
+            aria-expanded="false" aria-controls="collapseGestion">
+            <i class="fas fa-users-cog"></i>
+            <span>Usuarios y roles</span>
+            </a>
+            <div id="collapseGestion" class="collapse" aria-labelledby="headingGestion" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="usuarios.html">Usuarios</a>
+                <a class="collapse-item" href="roles.html">Roles y permisos</a>
+                <a class="collapse-item" href="perfil.html">Mi perfil</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Conocimiento -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConocimiento"
+            aria-expanded="false" aria-controls="collapseConocimiento">
+            <i class="fas fa-book-medical"></i>
+            <span>Conocimiento</span>
+            </a>
+            <div id="collapseConocimiento" class="collapse" aria-labelledby="headingConocimiento" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="guia-enfermedades.html">Guía de enfermedades</a>
+                <a class="collapse-item" href="dataset.html">Dataset y etiquetado</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+        <!-- Sidebar Message -->
+        <div class="sidebar-card d-none d-lg-flex">
+            <img class="sidebar-card-illustration mb-2" src="img/undraw_gardening.svg" alt="Ilustración de jardinería">
+            <p class="text-center mb-2">
+            <strong>Invernadero Inteligente</strong> — IA + geolocalización para tu cultivo.
+            </p>
+            <a class="btn btn-success btn-sm" href="acerca.html">Ver más</a>
+        </div>
+
+        </ul>
+
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+               <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars text-white"></i>
+                </button>
+
+                <!-- Topbar Search -->
+                <!-- <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                    <input type="text" class="form-control border-0 small" placeholder="Buscar reporte, plaga o región..."
+                        aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn" type="button">
+                        <i class="fas fa-search fa-sm text-white"></i>
+                        </button>
+                    </div>
+                    </div>
+                </form> -->
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw text-white"></i>
+                    </a>
+                    <!-- Dropdown - Search -->
+                    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                        aria-labelledby="searchDropdown">
+                        <form class="form-inline mr-auto w-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-0 small"
+                            placeholder="Buscar..." aria-label="Search"
+                            aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                            <button class="btn" type="button">
+                                <i class="fas fa-search fa-sm text-white"></i>
+                            </button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    </li>
+
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell fa-fw"></i>
+                        <!-- Counter - Alerts -->
+                        <span class="badge badge-counter">3</span>
+                    </a>
+                    <!-- Dropdown - Alerts -->
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="alertsDropdown">
+                        <h6 class="dropdown-header">
+                        Centro de Alertas
+                        </h6>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                            <i class="fas fa-leaf text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">Hoy</div>
+                            <span class="font-weight-bold">Se detectó un foco de roya en tu región.</span>
+                        </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                            <i class="fas fa-seedling text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">Ayer</div>
+                            Nuevos reportes de plantas sanas fueron agregados.
+                        </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-warning">
+                            <i class="fas fa-exclamation-triangle text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">Hace 2 días</div>
+                            Condiciones de humedad elevadas: riesgo de mancha angular.
+                        </div>
+                        </a>
+                        <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas las alertas</a>
+                    </div>
+                    </li>
+
+                    <!-- Nav Item - Messages -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-envelope fa-fw"></i>
+                        <!-- Counter - Messages -->
+                        <span class="badge badge-counter">5</span>
+                    </a>
+                    <!-- Dropdown - Messages -->
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">
+                        Centro de Mensajes
+                        </h6>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                            <div class="status-indicator bg-success"></div>
+                        </div>
+                        <div class="font-weight-bold">
+                            <div class="text-truncate">Revisa los nuevos lineamientos de manejo sostenible.</div>
+                            <div class="small text-gray-500">Equipo Técnico · 1h</div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                            <div class="status-indicator"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">Tus reportes de diagnóstico han sido validados.</div>
+                            <div class="small text-gray-500">Sistema · 1d</div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item text-center small text-gray-500" href="#">Leer más mensajes</a>
+                    </div>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                   <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline username-topbar"> 
+                        <i class="fas fa-user-circle mr-1"></i> Productor Juan
+                        </span>
+                        <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Perfil
+                        </a>
+                        <a class="dropdown-item" href="#">
+                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Configuración
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Cerrar sesión
+                        </a>
+                    </div>
+                    </li>
+                </ul>
+                </nav>
+
+
+
+
+               <!-- Begin Page Content -->
+                <div class="container-fluid" id="pageGraficos">
+
+                <!-- Título + acciones -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-2">
+                    <h1 class="h3 mb-0 text-success">
+                    <i class="fas fa-chart-area mr-2"></i> Gráficos
+                    </h1>
+                    <div class="btn-group">
+                    <button class="btn btn-success btn-sm" id="btnDescargarPNG">
+                        <i class="fas fa-download mr-1"></i> Descargar PNG (todos)
+                    </button>
+                    <a href="mapa-focos.html" class="btn btn-outline-success btn-sm">
+                        <i class="fas fa-map-marked-alt mr-1"></i> Ver mapa
+                    </a>
+                    </div>
+                </div>
+                <p class="mb-3 text-muted">Visualiza la evolución de reportes, la distribución por diagnóstico y las regiones con mayor incidencia.</p>
+
+                <!-- Filtros -->
+                <div class="card shadow-sm border-0 rounded-lg mb-3">
+                    <div class="card-body py-3">
+                    <form id="filtrosGraficos" class="form-row align-items-end">
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted">Desde</label>
+                        <input type="date" class="form-control" id="gDesde">
+                        </div>
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted">Hasta</label>
+                        <input type="date" class="form-control" id="gHasta">
+                        </div>
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted">Diagnóstico</label>
+                        <select class="form-control" id="gDiag">
+                            <option value="">Todos</option>
+                            <option value="healthy">Planta sana</option>
+                            <option value="angular_leaf_spot">Mancha angular</option>
+                            <option value="bean_rust">Roya</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted">Cultivo</label>
+                        <select class="form-control" id="gCultivo">
+                            <option value="">Todos</option>
+                            <option>Frijol rojo</option>
+                            <option>Frijol negro</option>
+                            <option>Frijol común</option>
+                        </select>
+                        </div>
+                        <div class="col-12">
+                        <button type="button" id="gAplicar" class="btn btn-success">
+                            <i class="fas fa-sync mr-1"></i> Actualizar
+                        </button>
+                        <div class="btn-group ml-2">
+                            <button type="button" class="btn btn-outline-success btn-sm rango-btn" data-rango="7">7 días</button>
+                            <button type="button" class="btn btn-outline-success btn-sm rango-btn" data-rango="30">30 días</button>
+                            <button type="button" class="btn btn-outline-success btn-sm rango-btn" data-rango="90">90 días</button>
+                        </div>
+                        <span class="ml-3 small text-muted" id="gResumen">Rango: últimos 30 días · Todos los diagnósticos</span>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+
+                <!-- Fila 1: Línea + Doughnut -->
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-success"><i class="fas fa-chart-line mr-1"></i> Incidencia diaria</h6>
+                        <small class="text-muted">Casos por día</small>
+                        </div>
+                        <div class="card-body">
+                        <div class="chart-area chart-h-lg"><canvas id="grafIncidencia"></canvas></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-5">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-success"><i class="fas fa-chart-pie mr-1"></i> Distribución por diagnóstico</h6>
+                        <small class="text-muted">Proporción</small>
+                        </div>
+                        <div class="card-body">
+                        <div class="chart-pie pt-2 pb-2"><canvas id="grafDistribucion"></canvas></div>
+                        <div class="mt-3 text-center small">
+                            <span class="mr-2"><i class="fas fa-circle text-success"></i> Sana</span>
+                            <span class="mr-2"><i class="fas fa-circle text-warning"></i> Mancha angular</span>
+                            <span class="mr-2"><i class="fas fa-circle" style="color:#9acd32"></i> Roya</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Fila 2: Barras horizontal + Barras apiladas -->
+                <div class="row">
+                    <div class="col-xl-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-success"><i class="fas fa-chart-bar mr-1"></i> Top regiones con más casos</h6>
+                        <small class="text-muted">Último periodo</small>
+                        </div>
+                        <div class="card-body">
+                        <div class="chart-area" style="height:380px"><canvas id="grafRegiones"></canvas></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-success"><i class="fas fa-layer-group mr-1"></i> Tendencia semanal por diagnóstico</h6>
+                        <small class="text-muted">Apilado</small>
+                        </div>
+                        <div class="card-body">
+                        <div class="chart-area" style="height:380px"><canvas id="grafApilado"></canvas></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <!-- <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer> -->
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/chart-pie-demo.js"></script>
+
+
+<script>
+(function(){
+  // Paleta
+  const GREEN = '#198754', GREEN_DK = '#157347', LIME = '#9acd32', YELLOW = '#ffc107';
+
+  // Utils
+  const $ = (sel) => document.querySelector(sel);
+  const ctx = (id) => document.getElementById(id).getContext('2d');
+  const fmt = (n) => n.toLocaleString('es-NI');
+  const today = new Date();
+  function addDays(d, n){ const nd = new Date(d); nd.setDate(nd.getDate()+n); return nd; }
+  function labelDays(n){
+    const labs=[]; for(let i=n-1;i>=0;i--){ const d=addDays(today,-i);
+      labs.push(d.toLocaleDateString('es-NI',{day:'2-digit',month:'short'}));
+    } return labs;
+  }
+
+  // Datos simulados (reemplaza por tu API)
+  function getData({days=30, diag='', cultivo='' }={}){
+    // genera arrays con tendencia suave
+    const base = Array.from({length:days}, () => 10 + Math.round(Math.random()*15));
+    const sana   = base.map(v => Math.max(4, Math.round(v*0.55 + (Math.random()*4-2))));
+    const angular= base.map(v => Math.max(1, Math.round(v*0.28 + (Math.random()*3-1))));
+    const roya   = base.map(v => Math.max(1, Math.round(v*0.17 + (Math.random()*2-1))));
+
+    // filtro por diagnóstico (si se solicita)
+    let datasets = { sana, angular, roya };
+    if (diag === 'healthy')   datasets = { sana };
+    if (diag === 'angular_leaf_spot') datasets = { angular };
+    if (diag === 'bean_rust') datasets = { roya };
+
+    // Top regiones
+    const regiones = ['Estelí','Matagalpa','León','Chontales','Jinotega','Madriz'];
+    const valores = regiones.map(()=> Math.round(20+Math.random()*80)).sort((a,b)=>b-a);
+    // Semanas apiladas (4 semanas)
+    const semanas = ['Sem 1','Sem 2','Sem 3','Sem 4'];
+    const semSana = semanas.map(()=> Math.round(30+Math.random()*30));
+    const semAng  = semanas.map(()=> Math.round(10+Math.random()*20));
+    const semRoya = semanas.map(()=> Math.round(8+Math.random()*15));
+
+    return { datasets, regiones, valores, semanas, semSana, semAng, semRoya };
+  }
+
+  // Gradientes
+  function buildGrad(ctx, hex){ const g = ctx.createLinearGradient(0,0,0,300);
+    const rgba = (h,a)=> {
+      if(h===GREEN) return `rgba(25,135,84,${a})`;
+      if(h===YELLOW) return `rgba(255,193,7,${a})`;
+      if(h===LIME) return `rgba(154,205,50,${a})`;
+      return `rgba(25,135,84,${a})`;
+    };
+    g.addColorStop(0, rgba(hex, .25)); g.addColorStop(1, rgba(hex, .03)); return g;
+  }
+
+  // Instancias Chart.js
+  let chIncidencia, chDistribucion, chRegiones, chApilado;
+
+  function renderCharts(days=30, diag='', cultivo=''){
+    const labels = labelDays(days);
+    const { datasets, regiones, valores, semanas, semSana, semAng, semRoya } = getData({days, diag, cultivo});
+
+    // Línea/área
+    const ds = [];
+    if (datasets.sana) ds.push({
+      label:'Planta sana',
+      data: datasets.sana,
+      borderColor: GREEN,
+      backgroundColor: buildGrad(ctx('grafIncidencia'), GREEN),
+      pointBackgroundColor: GREEN, pointBorderColor: GREEN, tension:.35, fill:true, pointRadius:2.5
+    });
+    if (datasets.angular) ds.push({
+      label:'Mancha angular',
+      data: datasets.angular,
+      borderColor: YELLOW,
+      backgroundColor: buildGrad(ctx('grafIncidencia'), YELLOW),
+      pointBackgroundColor: YELLOW, pointBorderColor: YELLOW, tension:.35, fill:true, pointRadius:2.5
+    });
+    if (datasets.roya) ds.push({
+      label:'Roya',
+      data: datasets.roya,
+      borderColor: LIME,
+      backgroundColor: buildGrad(ctx('grafIncidencia'), LIME),
+      pointBackgroundColor: LIME, pointBorderColor: LIME, tension:.35, fill:true, pointRadius:2.5
+    });
+
+    if (chIncidencia) chIncidencia.destroy();
+    chIncidencia = new Chart(ctx('grafIncidencia'), {
+      type:'line',
+      data:{ labels, datasets: ds },
+      options:{
+        maintainAspectRatio:false,
+        interaction:{ mode:'index', intersect:false },
+        plugins:{ legend:{ position:'top', labels:{ usePointStyle:true } },
+          tooltip:{ callbacks:{ label:(c)=>` ${c.dataset.label}: ${fmt(c.parsed.y)} casos` } }
+        },
+        scales:{ x:{ grid:{ display:false }}, y:{ beginAtZero:true, grid:{ color:'rgba(0,0,0,0.06)'}}}
+      }
+    });
+
+    // Doughnut
+    const sum = (a)=> a.reduce((s,v)=>s+v,0);
+    const valS = datasets.sana ? sum(datasets.sana) : 0;
+    const valA = datasets.angular ? sum(datasets.angular) : 0;
+    const valR = datasets.roya ? sum(datasets.roya) : 0;
+    if (chDistribucion) chDistribucion.destroy();
+    chDistribucion = new Chart(ctx('grafDistribucion'), {
+      type:'doughnut',
+      data:{
+        labels:['Sana','Mancha angular','Roya'],
+        datasets:[{ data:[valS,valA,valR], backgroundColor:[GREEN,YELLOW,LIME] }]
+      },
+      options:{ maintainAspectRatio:false, cutout:'55%', plugins:{ legend:{ display:false } } }
+    });
+
+    // Barras horizontales regiones
+    if (chRegiones) chRegiones.destroy();
+    chRegiones = new Chart(ctx('grafRegiones'), {
+      type:'bar',
+      data:{
+        labels: regiones.slice(0,6),
+        datasets:[{ label:'Casos', data: valores.slice(0,6), backgroundColor: GREEN }]
+      },
+      options:{
+        indexAxis:'y', maintainAspectRatio:false,
+        plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:(c)=>` ${fmt(c.parsed.x)} casos` } } },
+        scales:{ x:{ beginAtZero:true, grid:{ color:'rgba(0,0,0,0.06)'}}, y:{ grid:{ display:false } } }
+      }
+    });
+
+    // Barras apiladas semanales
+    if (chApilado) chApilado.destroy();
+    chApilado = new Chart(ctx('grafApilado'), {
+      type:'bar',
+      data:{
+        labels: semanas,
+        datasets:[
+          { label:'Sana', data: semSana, backgroundColor: GREEN },
+          { label:'Mancha angular', data: semAng, backgroundColor: YELLOW },
+          { label:'Roya', data: semRoya, backgroundColor: LIME }
+        ]
+      },
+      options:{
+        maintainAspectRatio:false,
+        plugins:{ legend:{ position:'top', labels:{ usePointStyle:true } } },
+        scales:{
+          x:{ stacked:true, grid:{ display:false } },
+          y:{ stacked:true, beginAtZero:true, grid:{ color:'rgba(0,0,0,0.06)'} }
+        }
+      }
+    });
+  }
+
+  // Filtros / rango rápido
+  function setResumen(days, diag, cultivo){
+    const map = { '':'Todos', healthy:'Planta sana', angular_leaf_spot:'Mancha angular', bean_rust:'Roya' };
+    $('#gResumen').textContent = `Rango: últimos ${days} días · ${map[diag] || 'Todos'} · ${cultivo || 'Todos los cultivos'}`;
+  }
+
+  let currentDays = 30;
+  renderCharts(currentDays);
+  setResumen(currentDays, '', '');
+
+  document.querySelectorAll('.rango-btn').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      currentDays = parseInt(b.dataset.rango,10);
+      renderCharts(currentDays, $('#gDiag').value, $('#gCultivo').value);
+      setResumen(currentDays, $('#gDiag').value, $('#gCultivo').value);
+      // set fechas rápidas:
+      const d = new Date(); const desde = new Date(); desde.setDate(d.getDate()-currentDays+1);
+      $('#gDesde').value = desde.toISOString().slice(0,10);
+      $('#gHasta').value = d.toISOString().slice(0,10);
+    });
+  });
+
+  $('#gAplicar').addEventListener('click', ()=>{
+    const diag = $('#gDiag').value;
+    const cultivo = $('#gCultivo').value;
+    // (Si quisieras usar fechas reales, filtra en tu backend; aquí solo afectan el resumen)
+    renderCharts(currentDays, diag, cultivo);
+    setResumen(currentDays, diag, cultivo);
+  });
+
+  // Descargar todos los charts en PNG (zip opcional si luego quieres)
+  $('#btnDescargarPNG').addEventListener('click', ()=>{
+    const charts = [
+      { id:'grafIncidencia', name:'incidencia.png' },
+      { id:'grafDistribucion', name:'distribucion.png' },
+      { id:'grafRegiones', name:'regiones.png' },
+      { id:'grafApilado', name:'semanas_apilado.png' },
+    ];
+    charts.forEach(c=>{
+      const link = document.createElement('a');
+      link.href = document.getElementById(c.id).toDataURL('image/png');
+      link.download = c.name;
+      link.click();
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+
+</html>

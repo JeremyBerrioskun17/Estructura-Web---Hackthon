@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gueguense Code</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+          <!-- Sidebar -->
+         <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-seedling"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">Gueguense<sup>Code</sup></div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard (Invernadero) -->
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">
+            <i class="fas fa-warehouse"></i>
+            <span>Dashboard</span>
+            </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Fitosanitaria</div>
+
+        <!-- Diagnóstico IA -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIA"
+            aria-expanded="false" aria-controls="collapseIA">
+            <i class="fas fa-microscope"></i>
+            <span>Diagnóstico IA</span>
+            </a>
+            <div id="collapseIA" class="collapse" aria-labelledby="headingIA" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Clasificación:</h6>
+                <a class="collapse-item" href="PlagasRegistradas.html">Plagas registradas</a>
+                <a class="collapse-item" href="Diagnostic.html">Mis diagnósticos</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Modelos IA:</h6>
+                <a class="collapse-item" href="utilities-border.html">Versiones del modelo</a>
+                <a class="collapse-item" href="tables.html">Métricas</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Mapas -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMapa"
+            aria-expanded="false" aria-controls="collapseMapa">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa</span>
+            </a>
+            <div id="collapseMapa" class="collapse" aria-labelledby="headingMapa" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Geolocalización:</h6>
+                <a class="collapse-item" href="mapa-focos.html">Focos y casos</a>
+                <a class="collapse-item" href="mapa-heatmap.html">Mapa de calor</a>
+                <a class="collapse-item" href="mapa-filtros.html">Filtros por fecha/región</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Reportes -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReportes"
+            aria-expanded="false" aria-controls="collapseReportes">
+            <i class="fas fa-chart-line"></i>
+            <span>Reportes</span>
+            </a>
+            <div id="collapseReportes" class="collapse" aria-labelledby="headingReportes" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Analítica:</h6>
+                <a class="collapse-item" href="Grafic.html">Gráficas</a>
+                <a class="collapse-item" href="tables.html">Datos en tabla</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">IoT</div>
+
+        <!-- Sensores -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSensores"
+            aria-expanded="false" aria-controls="collapseSensores">
+            <i class="fas fa-thermometer-half"></i>
+            <span>Sensores</span>
+            </a>
+            <div id="collapseSensores" class="collapse" aria-labelledby="headingSensores" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Lecturas:</h6>
+                <a class="collapse-item" href="temp.html">Monitoreo Tiempo Real</a>
+                <a class="collapse-item" href="temp.html">Control Segun analisis</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Control -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseControl"
+            aria-expanded="false" aria-controls="collapseControl">
+            <i class="fas fa-sliders-h"></i>
+            <span>Control</span>
+            </a>
+            <div id="collapseControl" class="collapse" aria-labelledby="headingControl" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Actuadores:</h6>
+                <a class="collapse-item" href="ventilador.html">Monitoreo automatico</a>
+                <a class="collapse-item" href="ventilador.html">Monitoreo Manual</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Gestión</div>
+
+        <!-- Gestión (Usuarios/Roles) -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGestion"
+            aria-expanded="false" aria-controls="collapseGestion">
+            <i class="fas fa-users-cog"></i>
+            <span>Usuarios y roles</span>
+            </a>
+            <div id="collapseGestion" class="collapse" aria-labelledby="headingGestion" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="usuarios.html">Usuarios</a>
+                <a class="collapse-item" href="roles.html">Roles y permisos</a>
+                <a class="collapse-item" href="perfil.html">Mi perfil</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Conocimiento -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConocimiento"
+            aria-expanded="false" aria-controls="collapseConocimiento">
+            <i class="fas fa-book-medical"></i>
+            <span>Conocimiento</span>
+            </a>
+            <div id="collapseConocimiento" class="collapse" aria-labelledby="headingConocimiento" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="guia-enfermedades.html">Guía de enfermedades</a>
+                <a class="collapse-item" href="dataset.html">Dataset y etiquetado</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+        <!-- Sidebar Message -->
+        <div class="sidebar-card d-none d-lg-flex">
+            <img class="sidebar-card-illustration mb-2" src="img/undraw_gardening.svg" alt="Ilustración de jardinería">
+            <p class="text-center mb-2">
+            <strong>Invernadero Inteligente</strong> — IA + geolocalización para tu cultivo.
+            </p>
+            <a class="btn btn-success btn-sm" href="acerca.html">Ver más</a>
+        </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+               <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars text-white"></i>
+                </button>
+
+                <!-- Topbar Search -->
+                <!-- <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                    <input type="text" class="form-control border-0 small" placeholder="Buscar reporte, plaga o región..."
+                        aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn" type="button">
+                        <i class="fas fa-search fa-sm text-white"></i>
+                        </button>
+                    </div>
+                    </div>
+                </form> -->
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw text-white"></i>
+                    </a>
+                    <!-- Dropdown - Search -->
+                    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                        aria-labelledby="searchDropdown">
+                        <form class="form-inline mr-auto w-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-0 small"
+                            placeholder="Buscar..." aria-label="Search"
+                            aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                            <button class="btn" type="button">
+                                <i class="fas fa-search fa-sm text-white"></i>
+                            </button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    </li>
+
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell fa-fw"></i>
+                        <!-- Counter - Alerts -->
+                        <span class="badge badge-counter">3</span>
+                    </a>
+                    <!-- Dropdown - Alerts -->
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="alertsDropdown">
+                        <h6 class="dropdown-header">
+                        Centro de Alertas
+                        </h6>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                            <i class="fas fa-leaf text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">Hoy</div>
+                            <span class="font-weight-bold">Se detectó un foco de roya en tu región.</span>
+                        </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                            <i class="fas fa-seedling text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">Ayer</div>
+                            Nuevos reportes de plantas sanas fueron agregados.
+                        </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-warning">
+                            <i class="fas fa-exclamation-triangle text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">Hace 2 días</div>
+                            Condiciones de humedad elevadas: riesgo de mancha angular.
+                        </div>
+                        </a>
+                        <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas las alertas</a>
+                    </div>
+                    </li>
+
+                    <!-- Nav Item - Messages -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-envelope fa-fw"></i>
+                        <!-- Counter - Messages -->
+                        <span class="badge badge-counter">5</span>
+                    </a>
+                    <!-- Dropdown - Messages -->
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">
+                        Centro de Mensajes
+                        </h6>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                            <div class="status-indicator bg-success"></div>
+                        </div>
+                        <div class="font-weight-bold">
+                            <div class="text-truncate">Revisa los nuevos lineamientos de manejo sostenible.</div>
+                            <div class="small text-gray-500">Equipo Técnico · 1h</div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                            <div class="status-indicator"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">Tus reportes de diagnóstico han sido validados.</div>
+                            <div class="small text-gray-500">Sistema · 1d</div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item text-center small text-gray-500" href="#">Leer más mensajes</a>
+                    </div>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                   <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline username-topbar"> 
+                        <i class="fas fa-user-circle mr-1"></i> Productor Juan
+                        </span>
+                        <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Perfil
+                        </a>
+                        <a class="dropdown-item" href="#">
+                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Configuración
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Cerrar sesión
+                        </a>
+                    </div>
+                    </li>
+                </ul>
+                </nav>
+                <!-- End of Topbar -->
+
+               <!-- Begin Page Content -->
+                <div class="container-fluid" id="pageDiagnosticos">
+                
+                  <!-- Título + acciones -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-3">
+                  <h1 class="h3 mb-0 text-success">
+                    <i class="fas fa-seedling mr-2"></i> Mis diagnósticos
+                  </h1>
+
+                  <!-- Acciones con espacio entre botones -->
+                  <div class="page-actions d-flex">
+                    <a href="#" class="btn btn-success btn-lg-sm" data-toggle="modal" data-target="#modalNuevoDiag">
+                      <i class="fas fa-plus mr-2"></i> Nuevo
+                    </a>
+                    <a href="#" class="btn btn-outline-success btn-lg-sm">
+                      <i class="fas fa-file-export mr-2"></i> Exportar
+                    </a>
+                    <a href="mapa-focos.html" class="btn btn-outline-success btn-lg-sm">
+                      <i class="fas fa-map-marked-alt mr-2"></i> Ver mapa
+                    </a>
+                  </div>
+                </div>
+
+                <p class="mb-3 text-muted">Filtra por fecha, diagnóstico, cultivo o texto (productor, región, notas). Los filtros activos aparecen como chips.</p>
+
+                <!-- Filtros -->
+                <div class="card shadow-sm border-0 rounded-lg mb-2">
+                    <div class="card-body py-3">
+                    <form id="filtrosDiag" class="form-row">
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted" for="fDesde">Desde</label>
+                        <input type="date" class="form-control" id="fDesde" aria-label="Fecha desde">
+                        </div>
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted" for="fHasta">Hasta</label>
+                        <input type="date" class="form-control" id="fHasta" aria-label="Fecha hasta">
+                        </div>
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted" for="fDiag">Diagnóstico</label>
+                        <select class="form-control" id="fDiag" aria-label="Diagnóstico">
+                            <option value="">Todos</option>
+                            <option value="healthy">Planta sana</option>
+                            <option value="angular_leaf_spot">Mancha angular</option>
+                            <option value="bean_rust">Roya</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                        <label class="small text-muted" for="fCultivo">Cultivo</label>
+                        <select class="form-control" id="fCultivo" aria-label="Cultivo">
+                            <option value="">Todos</option>
+                            <option>Frijol rojo</option>
+                            <option>Frijol negro</option>
+                            <option>Frijol común</option>
+                        </select>
+                        </div>
+                        <div class="col-12 mb-2">
+                        <label class="small text-muted" for="fTexto">Buscar</label>
+                        <input type="text" class="form-control" id="fTexto" placeholder="Productor, región o nota…" aria-label="Buscar por texto">
+                        </div>
+                        <div class="col-12">
+                        <button type="button" id="btnAplicar" class="btn btn-success">
+                            <i class="fas fa-filter mr-1"></i> Aplicar
+                        </button>
+                        <button type="button" id="btnLimpiar" class="btn btn-outline-success ml-2">
+                            Limpiar
+                        </button>
+                        <span class="ml-3 small text-muted" id="resumenResultados">
+                            Mostrando <strong id="countResultados">0</strong> resultados
+                        </span>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+
+                <!-- Chips de filtros activos -->
+                <div class="mb-3" id="chipsFiltros" aria-live="polite"></div>
+
+                <!-- Grid de cards -->
+                <div class="row" id="gridDiagnosticos">
+
+                    <!-- Card 1 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 diag-card"
+                        data-diag="healthy" data-cultivo="Frijol rojo" data-fecha="2025-08-25" data-region="Estelí"
+                        data-productor="María" data-notas="Hoja sin lesiones visibles. Condiciones estables y ventilación adecuada.">
+                   <div class="card card-diag border-0 h-100 overflow-hidden">
+                        <div class="ratio-box">
+                            <img src="img/diagnosticos/diag2.jpg" class="card-img-top" alt="Diagnóstico 2" loading="lazy">
+                            <span class="chip-ubicacion"><i class="fas fa-map-marker-alt mr-1"></i> Matagalpa</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                            <span class="badge badge-angular mr-2">Mancha angular</span>
+                            <span class="badge badge-cultivo">Frijol negro</span>
+                            <span class="ml-auto meta"><i class="far fa-clock mr-1"></i> 24 Ago 2025</span>
+                            </div>
+                            <p class="card-text mb-2 desc line-clamp-2">
+                            Lesiones angulares delimitadas por venas; humedad alta reciente.
+                            </p>
+                            <div class="d-flex align-items-center">
+                            <div class="conf-bar conf-mid" title="Confianza 84%"><div style="width:84%"></div></div>
+                            <span class="ml-2 small font-weight-bold text-warning">84%</span>
+                            <span class="ml-auto small text-muted">Productor: José</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex">
+                            <a href="detalle-diagnostico.html?id=2" class="btn btn-sm btn-outline-success rounded-pill mr-2">
+                            <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="mapa-focos.html?focus=2" class="btn btn-sm btn-outline-success rounded-pill mr-2">
+                            <i class="fas fa-map-pin"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill">
+                            <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 diag-card"
+                        data-diag="angular_leaf_spot" data-cultivo="Frijol negro" data-fecha="2025-08-24" data-region="Matagalpa"
+                        data-productor="José" data-notas="Lesiones angulares delimitadas por venas; humedad alta reciente.">
+                    <div class="card card-diag border-0 h-100 overflow-hidden">
+                        <div class="ratio-box">
+                            <img src="img/diagnosticos/diag2.jpg" class="card-img-top" alt="Diagnóstico 2" loading="lazy">
+                            <span class="chip-ubicacion"><i class="fas fa-map-marker-alt mr-1"></i> Matagalpa</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                            <span class="badge badge-angular mr-2">Mancha angular</span>
+                            <span class="badge badge-cultivo">Frijol negro</span>
+                            <span class="ml-auto meta"><i class="far fa-clock mr-1"></i> 24 Ago 2025</span>
+                            </div>
+                            <p class="card-text mb-2 desc line-clamp-2">
+                            Lesiones angulares delimitadas por venas; humedad alta reciente.
+                            </p>
+                            <div class="d-flex align-items-center">
+                            <div class="conf-bar conf-mid" title="Confianza 84%"><div style="width:84%"></div></div>
+                            <span class="ml-2 small font-weight-bold text-warning">84%</span>
+                            <span class="ml-auto small text-muted">Productor: José</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex">
+                            <a href="detalle-diagnostico.html?id=2" class="btn btn-sm btn-outline-success rounded-pill mr-2">
+                            <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="mapa-focos.html?focus=2" class="btn btn-sm btn-outline-success rounded-pill mr-2">
+                            <i class="fas fa-map-pin"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill">
+                            <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 diag-card"
+                        data-diag="bean_rust" data-cultivo="Frijol común" data-fecha="2025-08-23" data-region="León"
+                        data-productor="Elena" data-notas="Pústulas anaranjadas en el haz; mejorar ventilación.">
+                    <div class="card card-diag border-0 h-100 overflow-hidden">
+                        <div class="ratio-box">
+                            <img src="img/diagnosticos/diag2.jpg" class="card-img-top" alt="Diagnóstico 2" loading="lazy">
+                            <span class="chip-ubicacion"><i class="fas fa-map-marker-alt mr-1"></i> Matagalpa</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                            <span class="badge badge-angular mr-2">Mancha angular</span>
+                            <span class="badge badge-cultivo">Frijol negro</span>
+                            <span class="ml-auto meta"><i class="far fa-clock mr-1"></i> 24 Ago 2025</span>
+                            </div>
+                            <p class="card-text mb-2 desc line-clamp-2">
+                            Lesiones angulares delimitadas por venas; humedad alta reciente.
+                            </p>
+                            <div class="d-flex align-items-center">
+                            <div class="conf-bar conf-mid" title="Confianza 84%"><div style="width:84%"></div></div>
+                            <span class="ml-2 small font-weight-bold text-warning">84%</span>
+                            <span class="ml-auto small text-muted">Productor: José</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex">
+                            <a href="detalle-diagnostico.html?id=2" class="btn btn-sm btn-outline-success rounded-pill mr-2">
+                            <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="mapa-focos.html?focus=2" class="btn btn-sm btn-outline-success rounded-pill mr-2">
+                            <i class="fas fa-map-pin"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-success rounded-pill">
+                            <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- … duplica más cards … -->
+
+                </div><!-- /row -->
+
+                <!-- Estado vacío -->
+                <div id="estadoVacio" class="text-center py-5 d-none">
+                    <img src="img/undraw_gardening.svg" alt="" style="max-width:220px" class="mb-3">
+                    <h6 class="text-success">No hay diagnósticos que coincidan con los filtros</h6>
+                    <p class="text-muted">Ajusta el rango de fechas o limpia los filtros para ver resultados.</p>
+                    <button class="btn btn-outline-success btn-sm" id="btnLimpiar2"><i class="fas fa-broom mr-1"></i> Limpiar filtros</button>
+                </div>
+
+                <!-- Paginación (opcional) -->
+                <nav aria-label="Page navigation" class="mt-3">
+                    <ul class="pagination pagination-sm justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                    </ul>
+                </nav>
+
+                </div>
+                <!-- /.container-fluid -->
+
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<!-- Modal: Nuevo Diagnóstico -->
+<div class="modal fade" id="modalNuevoDiag" tabindex="-1" role="dialog" aria-labelledby="modalNuevoDiagLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+    <div class="modal-content border-0 rounded-lg">
+      <div class="modal-header bg-white">
+        <h5 class="modal-title text-success" id="modalNuevoDiagLabel">
+          <i class="fas fa-microscope mr-2"></i> Nuevo diagnóstico
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form id="formNuevoDiag" novalidate>
+        <div class="modal-body">
+
+          <!-- Imagen / captura -->
+          <div class="form-group">
+            <label class="font-weight-semibold">Foto de la hoja / planta <span class="text-danger">*</span></label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="ndFoto" accept="image/*" capture="environment" required>
+              <label class="custom-file-label" for="ndFoto">Seleccionar imagen…</label>
+            </div>
+            <small class="form-text text-muted">Formatos: JPG/PNG. Peso recomendado &lt; 5MB.</small>
+
+            <div id="ndPreviewWrap" class="mt-2 d-none">
+              <img id="ndPreview" alt="Vista previa" style="max-height:220px;border-radius:.6rem;box-shadow:0 6px 18px rgba(16,24,40,.08)">
+            </div>
+          </div>
+
+          <!-- Cultivo + Diagnóstico -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Cultivo <span class="text-danger">*</span></label>
+              <select class="form-control" id="ndCultivo" required>
+                <option value="">Seleccione…</option>
+                <option>Frijol rojo</option>
+                <option>Frijol negro</option>
+                <option>Frijol común</option>
+              </select>
+              <div class="invalid-feedback">Seleccione el cultivo.</div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Diagnóstico</label>
+              <select class="form-control" id="ndDiag">
+                <option value="">(Definir luego / por IA)</option>
+                <option value="healthy">Planta sana</option>
+                <option value="angular_leaf_spot">Mancha angular</option>
+                <option value="bean_rust">Roya</option>
+              </select>
+              <small class="form-text text-muted">Si lo dejas vacío, se clasificará por IA.</small>
+            </div>
+          </div>
+
+          <!-- Recomendación dinámica (aparece cuando hay plaga seleccionada) -->
+          <div class="form-group d-none" id="ndRecomWrap">
+            <label>Recomendación técnica</label>
+            <select class="form-control" id="ndRecom">
+              <!-- Opciones se cargan dinámicamente según diagnóstico -->
+            </select>
+            <small class="form-text text-muted">Sugerencias iniciales; el técnico puede ajustarlas.</small>
+          </div>
+
+          <!-- Fecha y Productor -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Fecha y hora</label>
+              <input type="datetime-local" class="form-control" id="ndFecha">
+            </div>
+            <div class="form-group col-md-6">
+              <label>Productor</label>
+              <input type="text" class="form-control" id="ndProductor" placeholder="Ej. Juan Pérez">
+            </div>
+          </div>
+
+          <!-- Ubicación -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Región / Municipio</label>
+              <input type="text" class="form-control" id="ndRegion" placeholder="Ej. Estelí, Matagalpa…">
+            </div>
+            <div class="form-group col-md-3">
+              <label>Lat</label>
+              <input type="text" class="form-control" id="ndLat" placeholder="Latitud" readonly>
+            </div>
+            <div class="form-group col-md-3">
+              <label>Lng</label>
+              <input type="text" class="form-control" id="ndLng" placeholder="Longitud" readonly>
+            </div>
+            <div class="col-12 mb-2">
+              <button type="button" class="btn btn-outline-success btn-sm" id="btnGeo">
+                <i class="fas fa-location-arrow mr-1"></i> Usar mi ubicación
+              </button>
+              <small class="text-muted ml-2" id="geoMsg"></small>
+            </div>
+          </div>
+
+          <!-- Notas -->
+          <div class="form-group">
+            <label>Notas</label>
+            <textarea class="form-control" id="ndNotas" rows="3" placeholder="Observaciones, manejo previo, etapa fenológica…"></textarea>
+          </div>
+
+          <!-- Loader / feedback -->
+          <div class="d-none" id="ndFeedback">
+            <div class="d-flex align-items-center">
+              <div class="spinner-border text-success mr-2" role="status" style="width:1.5rem;height:1.5rem"></div>
+              <span class="text-success">Enviando diagnóstico…</span>
+            </div>
+          </div>
+
+        </div><!-- /modal-body -->
+
+        <div class="modal-footer bg-white">
+          <button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success" id="btnGuardarDiag">
+            <i class="fas fa-save mr-1"></i> Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/chart-pie-demo.js"></script>
+
+
+
+    <script>
+(function(){
+  // ---- Helpers ----
+  function pad(n){ return n<10 ? '0'+n : n; }
+  function toLocalDatetimeValue(d){
+    // Convierte Date a 'YYYY-MM-DDTHH:MM'
+    return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'T'+pad(d.getHours())+':'+pad(d.getMinutes());
+  }
+
+  // ---- Prefill fecha actual ----
+  $('#modalNuevoDiag').on('shown.bs.modal', function(){
+    if(!$('#ndFecha').val()){
+      $('#ndFecha').val(toLocalDatetimeValue(new Date()));
+    }
+  });
+
+  // ---- Preview imagen + label del input ----
+  $('#ndFoto').on('change', function(e){
+    var file = this.files && this.files[0];
+    var $label = $(this).next('.custom-file-label');
+    $label.text(file ? file.name : 'Seleccionar imagen…');
+
+    if (!file) { $('#ndPreviewWrap').addClass('d-none'); return; }
+
+    var reader = new FileReader();
+    reader.onload = function(evt){
+      $('#ndPreview').attr('src', evt.target.result);
+      $('#ndPreviewWrap').removeClass('d-none');
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // ---- Recomendaciones dinámicas según diagnóstico ----
+  var RECOM_POR_DIAG = {
+    'angular_leaf_spot': [
+      'Reducir riego nocturno y salpicaduras',
+      'Usar semilla certificada; rotación de cultivo',
+      'Aplicar fungicida preventivo en etapa temprana'
+    ],
+    'bean_rust': [
+      'Mejorar ventilación; densidad de siembra adecuada',
+      'Retirar hojas muy afectadas',
+      'Aplicar fungicida específico para roya'
+    ]
+    // 'healthy' no sugiere nada
+  };
+
+  function renderRecom(diagValue){
+    var $wrap = $('#ndRecomWrap'), $sel = $('#ndRecom');
+    if(!diagValue || !RECOM_POR_DIAG[diagValue]){
+      $wrap.addClass('d-none');
+      $sel.empty();
+      return;
+    }
+    var options = RECOM_POR_DIAG[diagValue].map(function(txt){ return '<option>'+txt+'</option>'; }).join('');
+    $sel.html(options);
+    $wrap.removeClass('d-none');
+  }
+
+  $('#ndDiag').on('change', function(){ renderRecom(this.value); });
+
+  // ---- Geolocalización ----
+  $('#btnGeo').on('click', function(){
+    var $msg = $('#geoMsg');
+    if (!navigator.geolocation){
+      $msg.text('Tu navegador no soporta geolocalización.');
+      return;
+    }
+    $msg.text('Obteniendo ubicación…');
+    navigator.geolocation.getCurrentPosition(function(pos){
+      var lat = pos.coords.latitude.toFixed(6);
+      var lng = pos.coords.longitude.toFixed(6);
+      $('#ndLat').val(lat);
+      $('#ndLng').val(lng);
+      $msg.text('Ubicación establecida.');
+    }, function(err){
+      $msg.text('No se pudo obtener la ubicación (' + err.message + ').');
+    }, { enableHighAccuracy:true, timeout:8000, maximumAge:0 });
+  });
+
+  // ---- Validación y envío ----
+  $('#formNuevoDiag').on('submit', function(e){
+    e.preventDefault();
+
+    var foto = $('#ndFoto')[0].files[0];
+    var cultivo = $('#ndCultivo').val();
+    if(!foto){ $('#ndFoto')[0].reportValidity(); return; }
+    if(!cultivo){ $('#ndCultivo')[0].reportValidity(); return; }
+
+    var payload = new FormData();
+    payload.append('foto', foto);
+    payload.append('cultivo', cultivo);
+    payload.append('diagnostico', $('#ndDiag').val());     // puede ir vacío si será por IA
+    payload.append('recomendacion', $('#ndRecom').val() || '');
+    payload.append('fecha', $('#ndFecha').val() || new Date().toISOString());
+    payload.append('productor', $('#ndProductor').val() || '');
+    payload.append('region', $('#ndRegion').val() || '');
+    payload.append('lat', $('#ndLat').val() || '');
+    payload.append('lng', $('#ndLng').val() || '');
+    payload.append('notas', $('#ndNotas').val() || '');
+
+    // UI feedback
+    $('#ndFeedback').removeClass('d-none');
+    $('#btnGuardarDiag').prop('disabled', true);
+
+    // === EJEMPLO de POST (ajusta la URL de tu backend) ===
+    // $.ajax({
+    //   url: '/api/diagnosticos',
+    //   method: 'POST',
+    //   data: payload,
+    //   processData: false,
+    //   contentType: false
+    // }).done(function(resp){
+    //   $('#ndFeedback').addClass('d-none');
+    //   $('#btnGuardarDiag').prop('disabled', false);
+    //   $('#modalNuevoDiag').modal('hide');
+    //   // Refresca la lista o muestra toast de éxito
+    // }).fail(function(xhr){
+    //   $('#ndFeedback').addClass('d-none');
+    //   $('#btnGuardarDiag').prop('disabled', false);
+    //   alert('Error al guardar el diagnóstico');
+    // });
+
+    // DEMO: si no tienes backend aún, simulo éxito:
+    setTimeout(function(){
+      $('#ndFeedback').addClass('d-none');
+      $('#btnGuardarDiag').prop('disabled', false);
+      $('#modalNuevoDiag').modal('hide');
+      // Aquí podrías insertar la nueva card al grid…
+      console.log('Payload listo para enviar', Object.fromEntries(payload.entries()));
+    }, 900);
+  });
+
+})();
+</script>
+
+
+
+</body>
+
+</html>
